@@ -1,15 +1,26 @@
 {
-  "name": "pythontest",
+  "name": "browser-test",
   "version": "1.0.0",
-  "description": "\"# python-test\"",
-  "main": "app.js",
+  "description": "\"# browser-test\"",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chart.js": "^4.4.6"
   },
-  "type": "module"
+  "devDependencies": {
+    "@types/chart.js": "^2.9.41",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
 }
