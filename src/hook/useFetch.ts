@@ -8,9 +8,9 @@
  * 경로를 입력합니다.
  */
 
-const useFetch = async (path, method='GET', body='', token='') => {
+const useFetch = async (path: string, method: string='GET', body: any='', token: string='') :Promise<any> => {
   const baseServerUrl = 'http://127.0.0.1:8080'
-  let req = {
+  let req : RequestInit = {
     method: method,
     headers: {
       "Content-Type": "application/json",
