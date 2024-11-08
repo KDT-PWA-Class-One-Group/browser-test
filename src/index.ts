@@ -19,6 +19,31 @@ const postTest = async () : Promise<void> => {
   root.append(div)
 }
 
-buildInsa()
-postTest()
-chartViewer()
+const movieList = async () : Promise<void> => {
+  const res = await useFetch('/movie-list')
+  // console.log(res)
+}
+
+const preferenceCheck = async () : Promise<void> => {
+  const url = {
+    path: '/preference',
+    query: ['age=12', 'v=뭐야']
+  }
+  const res = await useFetch(`${url.path}?${url.query.join('&')}`)
+  console.log(res)
+}
+preferenceCheck()
+
+const getAge = async () : Promise<void> => {
+  const url = {
+    path: '/user-info'
+  }
+  const res = await useFetch(`${url.path}`)
+  console.log(res)
+}
+getAge()
+
+// buildInsa()
+// postTest()
+// movieList()
+// chartViewer()
