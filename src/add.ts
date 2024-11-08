@@ -20,9 +20,10 @@ const postTest = async () : Promise<void> => {
 }
 
 const movieList = async () : Promise<void> => {
-  const res = await useFetch('/movie-list')
-  // console.log(res)
+  const res = await useFetch('/api/test2')
+  console.log(res)
 }
+movieList()
 
 const preferenceCheck = async () : Promise<void> => {
   const url = {
